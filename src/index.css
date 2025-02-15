@@ -2,30 +2,39 @@
   display: flex;
   font-size: 24px;
   list-style-type: none;
+  gap: 10px;
 }
 .Nav-items > ul > li {
   padding: 10px;
-  margin: 10px;
+  margin: 0;
 }
 .Nav-items {
   padding: 0px 20px;
+  box-sizing: border-box;
 }
 #l {
   width: 130px;
-  height: 100px;
+  height: 120px;
+  object-fit: cover;
 }
 #li {
   width: 100%;
   height: 50%;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 .logo {
   width: 5px;
+  height: 5px;
 }
 .header {
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
+  padding: 10px;
+  height: 140px;
+  box-sizing: border-box;
 }
 .card {
   width: 275px;
@@ -33,22 +42,91 @@
   margin: 5px;
   padding: 25px;
   background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .card:hover {
   cursor: pointer;
   border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .resto-cards {
   margin: 10px;
   padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .search {
   display: flex;
   justify-content: center;
   padding: 10px;
+  margin-bottom: 20px;
 }
 .resto-container {
   padding: 40px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+}
+.filter {
+  margin: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+.filter:hover {
+  background-color: #ccc;
+}
+.shimmer-card {
+  width: 275px;
+  height: 350px;
+  margin: 5px;
+  padding: 25px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.shimmer-container {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.login-btn {
+  width: fit-content;
+  padding: 5px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: medium;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.search {
+  padding: 10px;
+  margin:5px;
+}
+.search-btn {
+  padding: 10px;
+  width: fit-content;
+  font-size: medium;
+}
+.search-box {
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px solid black;
+  font-size: medium;
+}
+.filter-btn{
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px solid black;
+  font-size: medium;
 }
