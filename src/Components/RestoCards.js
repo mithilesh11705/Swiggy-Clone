@@ -11,9 +11,11 @@ const RestoCards = (props) => {
           }
         />
         <h2>{resdata.info.name}</h2>
-        <h4>{resdata.info.cuisines.join(",")}</h4>
-        <h4>Rating: {resdata.info.avgRatingString}</h4>
-        <h4>Delivery Time: {resdata.info.sla.deliveryTime} Minutes</h4>
+        <h4 >{resdata.info.cuisines.join(",")}</h4>
+        <h4 >Rating: {resdata.info.avgRatingString}</h4>
+        <h4 className="wrap">Delivery Time: {resdata.info.sla.deliveryTime} Minutes</h4>
+   
+        
       </div>
     );
   };
