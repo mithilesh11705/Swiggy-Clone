@@ -2,6 +2,7 @@ import RestoCards from "./RestoCards";
 import DataList from "../Utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 const Body = () => {
   const [dataresto, setdataresto] = useState([]);
 
@@ -38,7 +39,15 @@ const Body = () => {
             setSearchText(e.target.value);
           }}
         />
-        <button className="search-btn" onClick={() => {}}>
+        <button
+          className="search-btn"
+          onClick={() => {
+            const filteredList = dataresto.filter((res) =>
+              res.info.name.toLowerCase().includes(searchText.toLowerCase())
+            );
+            setdataresto(filteredList);
+          }}
+        >
           Search
         </button>
       </div>
@@ -57,7 +66,9 @@ const Body = () => {
       </div>
       <div className="resto-container">
         {dataresto.map((restro) => (
-          <RestoCards key={restro.info.id} resdata={restro} />
+          <Link className="link" key={restro.info.id} to={"/restaurants/" + restro.info.id}>
+            <RestoCards resdata={restro} />
+          </Link>
         ))}
       </div>
     </div>
