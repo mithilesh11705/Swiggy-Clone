@@ -22,14 +22,14 @@ const Header = () => {
         <div className="Nav-items">
           <ul>
             <li>
-            <Link to="/">Home</Link>
+            <Link className="link" to="/">Home</Link>
             </li>
             <li>
-            <Link to="/about">
+            <Link  className="link" to="/about">
             About
             </Link></li>
             <li>
-            <Link to="/contact">Contact</Link>
+            <Link   className="link" to="/contact">Contact</Link>
             </li>
             <li>Cart</li>
             <button className="login-btn" onClick={handleClick}>{btnName}</button>
