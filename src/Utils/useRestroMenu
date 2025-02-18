@@ -1,0 +1,23 @@
+import { useEffect } from "react";
+import { MenuApi } from "./constants";
+import { useState } from "react";
+const useRestroMenu = (resId) => {
+  const [resinfo, setresinfo] = useState(null);
+
+  useEffect(() => {
+    fetchMenu();
+  }, []);
+  const fetchMenu = async () => {
+    const data = await fetch(
+      MenuApi + resId + "&catalog_qa=undefined&submitAction=ENTER"
+    );
+    const json = await data.json();
+
+    // console.log(json);
+    setresinfo(json.data);
+  };
+
+  return resinfo;
+};
+
+export default useRestroMenu;
